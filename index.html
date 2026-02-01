@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2ray Socks 代理管理</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>v2ray Socks5 应用级代理管理</h1>
+
+    <!-- 远程公告 -->
+    <div class="notice">
+      <h3>远程公告</h3>
+      <div id="notice-content">加载中...</div>
+      <button onclick="fetchNotice()">刷新公告</button>
+    </div>
+
+    <!-- 代理总开关 -->
+    <div class="switch-group">
+      <h3>代理状态</h3>
+      <label class="switch">
+        <input type="checkbox" id="proxy-switch">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- 核心修改：只保留账号密码输入，删除 IP/端口输入框 -->
+    <div class="config-group">
+      <h3>Socks5 认证配置</h3>
+      <input type="text" id="v2ray-socks-user" placeholder="账号（留空则免认证）" value="your-username">
+      <input type="password" id="v2ray-socks-pass" placeholder="密码（留空则免认证）" value="your-password">
+    </div>
+
+    <!-- 应用选择 -->
+    <div class="app-group">
+      <h3>需要代理的应用</h3>
+      <div id="app-list">加载中...</div>
+    </div>
+
+    <!-- 操作按钮 -->
+    <div class="btn-group">
+      <button onclick="saveConfig()">保存配置并生效</button>
+      <button onclick="checkUpdate()">检查模块更新</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
