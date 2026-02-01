@@ -1,0 +1,7 @@
+id=AppProxyModuleV2raySocksFixed
+name=App-Level Proxy Module (Fixed Socks Server)
+version=1.0.0
+versionCode=1
+author=Custom
+description=KernelSU 应用级代理模块，内置 Socks 服务器(127.0.0.1:1080)，前端隐藏 IP/端口，支持账号密码配置
+supported-archs=arm64-v8a,armeabi-v7a,x86_64
